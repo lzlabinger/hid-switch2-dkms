@@ -7,36 +7,36 @@ url="https://marc.info/?l=linux-input&m=176793335900691&q=mbox"
 license=('GPL-2.0-or-later')
 depends=('dkms')
 optdepends=('linux-headers: build against the default kernel'
-            'linux-lts-headers: build against the LTS kernel'
-            'linux-cachyos-headers: build against the CachyOS kernel')
+	'linux-lts-headers: build against the LTS kernel'
+	'linux-cachyos-headers: build against the CachyOS kernel')
 provides=('hid-switch2')
 conflicts=('hid-switch2')
 source=('Makefile'
-        'dkms.conf'
-        'hid-ids.h'
-        'hid-switch2.c'
-        'hid-switch2.h'
-        'switch2-usb.c'
-        '99-switch2-controllers.rules')
+	'dkms.conf'
+	'hid-ids.h'
+	'hid-switch2.c'
+	'hid-switch2.h'
+	'switch2-usb.c'
+	'99-switch2-controllers.rules')
 sha256sums=('eaf0c4c7baab747f458e1bb6028ea1350aa2a4c6528ebb25b4501b08a12d699c'
-            'c451b2c8a8e8fdd73da2c85f87d5e911e4024937afb207aea1ef0330670a6bf4'
-            'b42db6a4a5e932f4fca391efa8fb7d82e52ae9340b9a7868b082fc882b0bf416'
-            '3ea5556109dd36f05122042af37ca3ab8e0122bc8108846d4c7880d106debd41'
-            '25d28e8ea5848eefff32f29b78b59fd4add40af56dc4adab09485850f605d93f'
-            '342682f78a2de0c121f8cdd2d102fc69a70339146e3ae3aaca885eaad51bc96d'
-            'SKIP')
+	'c451b2c8a8e8fdd73da2c85f87d5e911e4024937afb207aea1ef0330670a6bf4'
+	'b42db6a4a5e932f4fca391efa8fb7d82e52ae9340b9a7868b082fc882b0bf416'
+	'8c63eb3d266e2d7f4736f86c879278a5490e9d35c61c1cbeac08867ecb234399'
+	'25d28e8ea5848eefff32f29b78b59fd4add40af56dc4adab09485850f605d93f'
+	'342682f78a2de0c121f8cdd2d102fc69a70339146e3ae3aaca885eaad51bc96d'
+	'SKIP')
 
 package() {
-  local _dest="${pkgdir}/usr/src/switch2-${pkgver}"
-  install -dm755 "${_dest}"
-  install -Dm644 "${srcdir}/Makefile"       "${_dest}/Makefile"
-  install -Dm644 "${srcdir}/dkms.conf"      "${_dest}/dkms.conf"
-  install -Dm644 "${srcdir}/hid-ids.h"      "${_dest}/hid-ids.h"
-  install -Dm644 "${srcdir}/hid-switch2.c"  "${_dest}/hid-switch2.c"
-  install -Dm644 "${srcdir}/hid-switch2.h"  "${_dest}/hid-switch2.h"
-  install -Dm644 "${srcdir}/switch2-usb.c"  "${_dest}/switch2-usb.c"
+	local _dest="${pkgdir}/usr/src/switch2-${pkgver}"
+	install -dm755 "${_dest}"
+	install -Dm644 "${srcdir}/Makefile" "${_dest}/Makefile"
+	install -Dm644 "${srcdir}/dkms.conf" "${_dest}/dkms.conf"
+	install -Dm644 "${srcdir}/hid-ids.h" "${_dest}/hid-ids.h"
+	install -Dm644 "${srcdir}/hid-switch2.c" "${_dest}/hid-switch2.c"
+	install -Dm644 "${srcdir}/hid-switch2.h" "${_dest}/hid-switch2.h"
+	install -Dm644 "${srcdir}/switch2-usb.c" "${_dest}/switch2-usb.c"
 
-  # Install udev rules
-  install -Dm644 "${srcdir}/99-switch2-controllers.rules" \
-    "${pkgdir}/usr/lib/udev/rules.d/99-switch2-controllers.rules"
+	# Install udev rules
+	install -Dm644 "${srcdir}/99-switch2-controllers.rules" \
+		"${pkgdir}/usr/lib/udev/rules.d/99-switch2-controllers.rules"
 }

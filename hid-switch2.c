@@ -123,8 +123,8 @@ static const struct switch2_ctlr_button_mapping left_joycon_button_mappings[] = 
 };
 
 static const struct switch2_ctlr_button_mapping right_joycon_button_mappings[] = {
-	{ BTN_SOUTH,	0, NS2_BTNR_A,		},
-	{ BTN_EAST,	0, NS2_BTNR_B,		},
+	{ BTN_EAST,	0, NS2_BTNR_A,		},
+	{ BTN_SOUTH,	0, NS2_BTNR_B,		},
 	{ BTN_NORTH,	0, NS2_BTNR_X,		},
 	{ BTN_WEST,	0, NS2_BTNR_Y,		},
 	{ BTN_TR,	0, NS2_BTNR_R,		},
@@ -138,8 +138,8 @@ static const struct switch2_ctlr_button_mapping right_joycon_button_mappings[] =
 };
 
 static const struct switch2_ctlr_button_mapping procon_mappings[] = {
-	{ BTN_SOUTH,	0, NS2_BTNR_A,		},
-	{ BTN_EAST,	0, NS2_BTNR_B,		},
+	{ BTN_EAST,	0, NS2_BTNR_A,		},
+	{ BTN_SOUTH,	0, NS2_BTNR_B,		},
 	{ BTN_NORTH,	0, NS2_BTNR_X,		},
 	{ BTN_WEST,	0, NS2_BTNR_Y,		},
 	{ BTN_TL,	1, NS2_BTNL_L,		},
@@ -159,8 +159,8 @@ static const struct switch2_ctlr_button_mapping procon_mappings[] = {
 };
 
 static const struct switch2_ctlr_button_mapping gccon_mappings[] = {
-	{ BTN_SOUTH,	0, NS2_BTNR_A,		},
-	{ BTN_EAST,	0, NS2_BTNR_B,		},
+	{ BTN_EAST,	0, NS2_BTNR_A,		},
+	{ BTN_SOUTH,	0, NS2_BTNR_B,		},
 	{ BTN_NORTH,	0, NS2_BTNR_X,		},
 	{ BTN_WEST,	0, NS2_BTNR_Y,		},
 	{ BTN_TL,	1, NS2_BTNL_L,		},
